@@ -27,6 +27,20 @@ app.get("/", (req, res) => {
   res.render("home", { title: "App", message: "Welcome!" });
 });
 
+app.get("/users", (req, res)) => {
+
+    res.render("index");
+}
+
+
+app.get("/users/:id", (req, res)) => {
+    
+    res.render("info");
+}
+
+export default Router; 
+
+
 app.get('/about', (req, res) => {
     res.render('about', {title: 'App', message: 'Welcome!'})
 })
